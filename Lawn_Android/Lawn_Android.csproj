@@ -1,0 +1,91 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-android33.0</TargetFramework>
+		<DefineConstants>LAWNMOD; </DefineConstants>
+    <SupportedOSPlatformVersion>23</SupportedOSPlatformVersion>
+    <OutputType>Exe</OutputType>
+    <ApplicationId>net.pvz.explodenut</ApplicationId>
+    <ApplicationVersion>00140000</ApplicationVersion>
+    <ApplicationDisplayVersion>0.14.0</ApplicationDisplayVersion>
+    <AssemblyName>Lawn</AssemblyName>
+    <AndroidSdkDirectory>D:\Android\android-sdk</AndroidSdkDirectory>
+    <JavaSdkDirectory>C:\Program Files\Java\jdk-11</JavaSdkDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PublishTrimmed>False</PublishTrimmed>
+    <RunAOTCompilation>False</RunAOTCompilation>
+    <AndroidKeyStore>False</AndroidKeyStore>
+    <Optimize>True</Optimize>
+    <DebugType>portable</DebugType>
+    <AndroidUseAssemblyStore>False</AndroidUseAssemblyStore>
+    <AndroidEnableSGenConcurrent>True</AndroidEnableSGenConcurrent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AndroidKeyStore>False</AndroidKeyStore>
+    <DebugType>portable</DebugType>
+    <AndroidUseAssemblyStore>False</AndroidUseAssemblyStore>
+    <AndroidEnableSGenConcurrent>True</AndroidEnableSGenConcurrent>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+  </PropertyGroup>
+  <ItemGroup>
+    <AndroidLibrary Remove="AutoSign\**" />
+    <AndroidNativeLibrary Remove="AutoSign\**" />
+    <Compile Remove="AutoSign\**" />
+    <EmbeddedResource Remove="AutoSign\**" />
+    <JavaSourceJar Remove="AutoSign\**" />
+    <None Remove="Assets\**" />
+    <None Remove="AutoSign\**" />
+    <TransformFile Remove="AutoSign\**" />
+    <Compile Remove="Com.Tencent.Bugly\*.cs" />
+    <Compile Include="Com.Tencent.Bugly\*.cs" />
+    <None Remove="Resources\Drawable\Icon.png" />
+    <None Remove="Resources\Values\Strings.xml" />
+    <None Remove="Resources\Xml\network_security_config.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FontStashSharp.MonoGame" Version="1.3.6" />
+		<PackageReference Include="MonoGame.Framework.Android" Version="3.8.1.303" />
+    <PackageReference Include="MonoGame.IMEHelper.Common" Version="0.9.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="SharpZipLib" Version="1.4.2" />
+    <PackageReference Include="XamarinLibrary.Xamarin.Android.Tencent.Bugly" Version="3.2.3.1" />
+  </ItemGroup>
+	<ItemGroup Condition="$(DefineConstants.Contains('LAWNMOD'))">
+		<PackageReference Include="IronPython" Version="3.4.0" />
+		<PackageReference Include="MonoMod.RuntimeDetour" Version="22.7.31.1" />
+		<PackageReference Include="WebSocketSharp.NetCore" Version="1.0.1-alpha.4" />
+	</ItemGroup>
+  <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
+    <Message Text="Restoring dotnet tools" Importance="High" />
+    <Exec Command="dotnet tool restore" />
+  </Target>
+  <Import Project="..\Lawn_Shared\Lawn_Shared.projitems" Label="Shared" />
+  <Import Project="..\MonoGame.Framework.Net\MonoGame.Framework.Net.projitems" Label="Shared" />
+  <Import Project="..\IronPyInteractiveDef_Shared\IronPyInteractiveDef_Shared.projitems" Label="Shared" Condition="$(DefineConstants.Contains('LAWNMOD'))" />
+    <Import Project="..\LawnModExtension\LawnModExtension.projitems" Label="Shared" Condition="$(DefineConstants.Contains('LAWNMOD'))" />
+
+  <Target Name="SignApkPreparation">
+    <Message Text="Retrieving AutoSign properties, if you don't have it then just ignore any errors below..." Importance="High" />
+    <Exec Command="python AutoSign/autosignprops.py AndroidKeyStore" ContinueOnError="true" ConsoleToMSBuild="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="AndroidKeyStore" />
+    </Exec>
+    <Exec Command="python AutoSign/autosignprops.py AndroidSigningKeyStore" ContinueOnError="true" ConsoleToMSBuild="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="AndroidSigningKeyStore" />
+    </Exec>
+    <Exec Command="python AutoSign/autosignprops.py AndroidSigningStorePass" ContinueOnError="true" ConsoleToMSBuild="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="AndroidSigningStorePass" />
+    </Exec>
+    <Exec Command="python AutoSign/autosignprops.py AndroidSigningKeyAlias" ContinueOnError="true" ConsoleToMSBuild="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="AndroidSigningKeyAlias" />
+    </Exec>
+    <Exec Command="python AutoSign/autosignprops.py AndroidSigningKeyPass" ContinueOnError="true" ConsoleToMSBuild="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="AndroidSigningKeyPass" />
+    </Exec>
+  </Target>
+  <PropertyGroup>
+    <AfterGenerateAndroidManifest>
+      $(AfterGenerateAndroidManifest);
+      SignApkPreparation;
+    </AfterGenerateAndroidManifest>
+  </PropertyGroup>
+</Project>

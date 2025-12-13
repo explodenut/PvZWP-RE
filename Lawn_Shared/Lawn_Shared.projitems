@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>1a95301d-4238-4ccd-9b56-38537e891b16</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Lawn_Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Lawn\**" />
+	<Compile Remove="$(MSBuildThisFileDirectory)Lawn\Strings.resources" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sexy\**" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sexy.TodLib\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Lawn\Strings.resources" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Microsoft.Xna.Framework.RuntimeProfile" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Microsoft.Xna.Framework.XlastConfiguration" />
+  </ItemGroup>
+</Project>
