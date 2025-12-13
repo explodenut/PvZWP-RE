@@ -1,3 +1,0 @@
-drawable\icon;drawable\Icon
-values\strings;values\Strings
-xml\network_security_config;xml\network_security_config
