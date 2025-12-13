@@ -6407,7 +6407,6 @@ namespace Lawn
             case GameMode.SurvivalNormalStage1:
             case GameMode.SurvivalHardStage1:
             case GameMode.SurvivalEndlessStage1:
-            case GameMode.ChallengeWarAndPeas:
             case GameMode.ChallengeWallnutBowling:
             case GameMode.ChallengeSlotMachine:
             case GameMode.ChallengeSeeingStars:
@@ -6459,7 +6458,6 @@ namespace Lawn
             case GameMode.ChallengeBobsledBonanza:
             case GameMode.ChallengeSpeed:
             case GameMode.ChallengeLastStand:
-            case GameMode.ChallengeWarAndPeas2:
             case GameMode.Upsell:
             case GameMode.Intro:
                 mBackground = BackgroundType.Num3Pool;
@@ -6480,9 +6478,11 @@ namespace Lawn
             case GameMode.ChallengePogoParty:
             case GameMode.ChallengeHighGravity:
             case GameMode.ChallengeBungeeBlitz:
+            case GameMode.ChallengeWarAndPeas:
                 mBackground = BackgroundType.Num5Roof;
                 break;
             case GameMode.ChallengeFinalBoss:
+            case GameMode.ChallengeWarAndPeas2:
                 mBackground = BackgroundType.Num6Boss;
                 break;
             case GameMode.ChallengeZenGarden:
