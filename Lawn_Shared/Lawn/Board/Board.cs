@@ -3566,7 +3566,7 @@ namespace Lawn
 
         public bool StageHas6Rows()
         {
-            return mBackground == BackgroundType.Num1Day || mBackground == BackgroundType.Num2Night ||  mBackground == BackgroundType.Num3Pool || mBackground == BackgroundType.Num4Fog;
+            return mBackground == BackgroundType.Num3Pool || mBackground == BackgroundType.Num4Fog;
         }
 
         public bool StageHasFog()
@@ -6407,6 +6407,7 @@ namespace Lawn
             case GameMode.SurvivalNormalStage1:
             case GameMode.SurvivalHardStage1:
             case GameMode.SurvivalEndlessStage1:
+            case GameMode.ChallengeWarAndPeas:
             case GameMode.ChallengeWallnutBowling:
             case GameMode.ChallengeSlotMachine:
             case GameMode.ChallengeSeeingStars:
@@ -6467,6 +6468,7 @@ namespace Lawn
             case GameMode.SurvivalEndlessStage4:
             case GameMode.ChallengeRainingSeeds:
             case GameMode.ChallengeInvisighoul:
+            case GameMode.ChallengeWarAndPeas2:
             case GameMode.ChallengeAirRaid:
             case GameMode.ChallengeStormyNight:
                 mBackground = BackgroundType.Num4Fog;
@@ -6478,11 +6480,9 @@ namespace Lawn
             case GameMode.ChallengePogoParty:
             case GameMode.ChallengeHighGravity:
             case GameMode.ChallengeBungeeBlitz:
-            case GameMode.ChallengeWarAndPeas:
                 mBackground = BackgroundType.Num5Roof;
                 break;
             case GameMode.ChallengeFinalBoss:
-            case GameMode.ChallengeWarAndPeas2:
                 mBackground = BackgroundType.Num6Boss;
                 break;
             case GameMode.ChallengeZenGarden:
@@ -6506,7 +6506,7 @@ namespace Lawn
                 mPlantRow[2] = PlantRowType.Normal;
                 mPlantRow[3] = PlantRowType.Normal;
                 mPlantRow[4] = PlantRowType.Normal;
-                mPlantRow[5] = PlantRowType.Normal;
+                mPlantRow[5] = PlantRowType.Dirt;
                 if (mApp.IsAdventureMode() && mApp.IsFirstTimeAdventureMode())
                 {
                     if (mLevel == 1)
@@ -6515,20 +6515,20 @@ namespace Lawn
                         mPlantRow[1] = PlantRowType.Normal;
                         mPlantRow[3] = PlantRowType.Normal;
                         mPlantRow[4] = PlantRowType.Normal;
-                        mPlantRow[5] = PlantRowType.Normal;
+                        mPlantRow[5] = PlantRowType.Dirt;
                     }
                     else if (mLevel == 2 || mLevel == 3)
                     {
                         mPlantRow[0] = PlantRowType.Normal;
                         mPlantRow[4] = PlantRowType.Normal;
-                        mPlantRow[5] = PlantRowType.Normal;
+                        mPlantRow[5] = PlantRowType.Dirt;
                     }
                 }
                 else if (mApp.mGameMode == GameMode.ChallengeResodded)
                 {
-                    mPlantRow[0] = PlantRowType.Pool;
-                    mPlantRow[4] = PlantRowType.Pool;
-                    mPlantRow[5] = PlantRowType.Pool;
+                    mPlantRow[0] = PlantRowType.Dirt;
+                    mPlantRow[4] = PlantRowType.Dirt;
+                    mPlantRow[5] = PlantRowType.Dirt;
                 }
             }
             else if (mBackground == BackgroundType.Num2Night)
@@ -6538,7 +6538,7 @@ namespace Lawn
                 mPlantRow[2] = PlantRowType.Normal;
                 mPlantRow[3] = PlantRowType.Normal;
                 mPlantRow[4] = PlantRowType.Normal;
-                mPlantRow[5] = PlantRowType.Normal;
+                mPlantRow[5] = PlantRowType.Dirt;
             }
             else if (mBackground == BackgroundType.Num3Pool || mBackground == BackgroundType.Zombiquarium)
             {
