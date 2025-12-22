@@ -6459,6 +6459,7 @@ namespace Lawn
             case GameMode.ChallengeBobsledBonanza:
             case GameMode.ChallengeSpeed:
             case GameMode.ChallengeLastStand:
+            case GameMode.ChallengeWarAndPeas2:
             case GameMode.Upsell:
             case GameMode.Intro:
                 mBackground = BackgroundType.Num3Pool;
@@ -6468,7 +6469,6 @@ namespace Lawn
             case GameMode.SurvivalEndlessStage4:
             case GameMode.ChallengeRainingSeeds:
             case GameMode.ChallengeInvisighoul:
-            case GameMode.ChallengeWarAndPeas2:
             case GameMode.ChallengeAirRaid:
             case GameMode.ChallengeStormyNight:
                 mBackground = BackgroundType.Num4Fog;
@@ -6515,20 +6515,17 @@ namespace Lawn
                         mPlantRow[1] = PlantRowType.Normal;
                         mPlantRow[3] = PlantRowType.Normal;
                         mPlantRow[4] = PlantRowType.Normal;
-                        mPlantRow[5] = PlantRowType.Dirt;
                     }
                     else if (mLevel == 2 || mLevel == 3)
                     {
                         mPlantRow[0] = PlantRowType.Normal;
                         mPlantRow[4] = PlantRowType.Normal;
-                        mPlantRow[5] = PlantRowType.Dirt;
                     }
                 }
                 else if (mApp.mGameMode == GameMode.ChallengeResodded)
                 {
                     mPlantRow[0] = PlantRowType.Dirt;
                     mPlantRow[4] = PlantRowType.Dirt;
-                    mPlantRow[5] = PlantRowType.Dirt;
                 }
             }
             else if (mBackground == BackgroundType.Num2Night)
@@ -6542,12 +6539,12 @@ namespace Lawn
             }
             else if (mBackground == BackgroundType.Num3Pool || mBackground == BackgroundType.Zombiquarium)
             {
-                mPlantRow[0] = PlantRowType.Pool;
-                mPlantRow[1] = PlantRowType.Pool;
+                mPlantRow[0] = PlantRowType.Normal;
+                mPlantRow[1] = PlantRowType.Normal;
                 mPlantRow[2] = PlantRowType.Pool;
                 mPlantRow[3] = PlantRowType.Pool;
                 mPlantRow[4] = PlantRowType.Pool;
-                mPlantRow[5] = PlantRowType.Pool;
+                mPlantRow[5] = PlantRowType.Normal;
             }
             else if (mBackground == BackgroundType.Num4Fog)
             {
