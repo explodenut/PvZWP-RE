@@ -6524,8 +6524,8 @@ namespace Lawn
                 }
                 else if (mApp.mGameMode == GameMode.ChallengeResodded)
                 {
-                    mPlantRow[0] = PlantRowType.Dirt;
-                    mPlantRow[4] = PlantRowType.Dirt;
+                    mPlantRow[0] = PlantRowType.Pool;
+                    mPlantRow[4] = PlantRowType.Pool;
                 }
             }
             else if (mBackground == BackgroundType.Num2Night)

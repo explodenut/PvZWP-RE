@@ -895,15 +895,15 @@ namespace Lawn
         {
             if (mType == CoinType.Sun)
             {
-                return 50;
+                return 30;
             }
             if (mType == CoinType.Smallsun)
             {
-                return 30;
+                return 20;
             }
             if (mType == CoinType.Largesun)
             {
-                return 100;
+                return 60;
             }
             return 0;
         }
