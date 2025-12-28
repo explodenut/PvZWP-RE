@@ -1,3 +1,21 @@
 # PvZWP-RE
-基于2508大佬的WP0.14.0版
-目前不提供Android版
+
+## 编译
+
+### dotnet build 命令
+打开命令提示符，cd到项目的文件夹，输入dotnet build Lawn.sln
+
+### VS2022
+打开VS2022，点击上面的生成，再点生成解决方案
+
+## 安装
+把资源包与主程放在同一目录下
+资源包可以在[PlantsVsZombies.NET原项目](https://github.com/Mewnojs/PlantsVsZombies.NET)的联系方式里找到
+
+## 其它
+这个项目目前不提供Android版，需要的自己编译
+
+## 联系方式
+E-mail:explodenut@outlook.com
+[YouTube](https://youtube.com/@explodenutyt)
+[Twitter](https://x.com/explodenutX)
