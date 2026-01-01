@@ -574,7 +574,7 @@ namespace Lawn
                 new PlantDefinition(SeedType.Fumeshroom,    null, ReanimationType.Fumeshroom,   9,  125, 1000, PlantSubClass.Shooter, 70, "FUME_SHROOM"),
                 new PlantDefinition(SeedType.Gravebuster,   null, ReanimationType.GraveBuster,  40, 0, 750, PlantSubClass.Normal,  0, "GRAVE_BUSTER"),
                 new PlantDefinition(SeedType.Hypnoshroom,   null, ReanimationType.Hypnoshroom,  10, 75, 3000,PlantSubClass.Normal,  0, "HYPNO_SHROOM"),
-                new PlantDefinition(SeedType.Scaredyshroom, null, ReanimationType.Scrareyshroom,33, 25, 750, PlantSubClass.Shooter, 70, "SCAREDY_SHROOM"),
+                new PlantDefinition(SeedType.Scaredyshroom, null, ReanimationType.Scrareyshroom,33, 25, 750, PlantSubClass.Shooter, 35, "SCAREDY_SHROOM"),
                 new PlantDefinition(SeedType.Iceshroom,     null, ReanimationType.Iceshroom,    36, 75, 5000,PlantSubClass.Normal,  0, "ICE_SHROOM"),
                 new PlantDefinition(SeedType.Doomshroom,    null, ReanimationType.Doomshroom,   20, 200,5000,PlantSubClass.Normal,  0, "DOOM_SHROOM"),
                 new PlantDefinition(SeedType.Lilypad,       null, ReanimationType.Lilypad,      19, 0, 0, PlantSubClass.Normal,  0, "LILY_PAD"),
