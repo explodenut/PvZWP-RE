@@ -5846,7 +5846,7 @@ namespace Lawn
             }
             else if (mApp.IsAdventureMode() || mApp.IsQuickPlayMode())
             {
-                int num = TodCommon.ClampInt(mLevel - 1, 0, 49);
+                int num = TodCommon.ClampInt(mLevel - 1, 0, GameConstants.NUM_LEVELS - 1);
                 mNumWaves = GameConstants.gZombieWaves[num];
                 if (!mApp.IsFirstTimeAdventureMode() && !mApp.IsMiniBossLevel())
                 {
@@ -6278,7 +6278,7 @@ namespace Lawn
                 return false;
             }
             Debug.ASSERT(GameConstants.gZombieAllowedLevels[(int)theZombieType].mZombieType == theZombieType);
-            int num = TodCommon.ClampInt(theLevel - 1, 0, 49);
+            int num = TodCommon.ClampInt(theLevel - 1, 0, GameConstants.NUM_LEVELS - 1);
             return GameConstants.gZombieAllowedLevels[(int)theZombieType].mAllowedOnLevel[num] != 0;
         }
 
@@ -6371,38 +6371,43 @@ namespace Lawn
             case GameMode.Quickplay48:
             case GameMode.Quickplay49:
             case GameMode.Quickplay50:
-                if (mLevel <= 1 * GameConstants.LEVELS_PER_AREA)
-                {
-                    mBackground = BackgroundType.Num1Day;
-                }
-                else if (mLevel <= 2 * GameConstants.LEVELS_PER_AREA)
-                {
-                    mBackground = BackgroundType.Num2Night;
-                }
-                else if (mLevel <= 3 * GameConstants.LEVELS_PER_AREA)
-                {
-                    mBackground = BackgroundType.Num3Pool;
-                }
-                else if (mApp.IsScaryPotterLevel())
-                {
-                    mBackground = BackgroundType.Num2Night;
-                }
-                else if (mLevel <= 4 * GameConstants.LEVELS_PER_AREA)
-                {
-                    mBackground = BackgroundType.Num4Fog;
-                }
-                else if (mLevel < GameConstants.FINAL_LEVEL)
-                {
-                    mBackground = BackgroundType.Num5Roof;
-                }
-                else if (mLevel == GameConstants.FINAL_LEVEL)
-                {
-                    mBackground = BackgroundType.Num6Boss;
-                }
-                else
-                {
-                    mBackground = BackgroundType.Num1Day;
-                }
+if (mLevel <= 1 * GameConstants.LEVELS_PER_AREA)
+{
+    mBackground = BackgroundType.Num1Day;
+}
+else if (mLevel <= 2 * GameConstants.LEVELS_PER_AREA)
+{
+    mBackground = BackgroundType.Num2Night;
+}
+else if (mLevel <= 3 * GameConstants.LEVELS_PER_AREA)
+{
+    mBackground = BackgroundType.Num3Pool;
+}
+else if (mApp.IsScaryPotterLevel())
+{
+    mBackground = BackgroundType.Num2Night;
+}
+else if (mLevel <= 4 * GameConstants.LEVELS_PER_AREA)
+{
+    mBackground = BackgroundType.Num4Fog;
+}
+else if (mLevel <= 5 * GameConstants.LEVELS_PER_AREA)
+{
+    mBackground = BackgroundType.Num5Roof;
+}
+else if (mLevel < GameConstants.FINAL_LEVEL)
+{
+    mBackground = BackgroundType.Num6Boss;
+}
+else if (mLevel == GameConstants.FINAL_LEVEL)
+{
+    mBackground = BackgroundType.Num6Boss;
+}
+else
+{
+    mBackground = BackgroundType.Num1Day;
+}
+
                 break;
             case GameMode.SurvivalNormalStage1:
             case GameMode.SurvivalHardStage1:
