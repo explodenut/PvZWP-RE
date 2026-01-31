@@ -632,7 +632,7 @@ GameConstants.gZombieAllowedLevels = new ZombieAllowedLevels[(int)ZombieType.Zom
             GameConstants.gPlantDefs = new PlantDefinition[(int)SeedType.SeedTypeCount]
             {
                 /*                | SeedType 枚举值   | 植物图像 |动画轨道类型           |选卡序号|价格|冷却|子类                  |发射速率|名称| */
-                new PlantDefinition(SeedType.Peashooter,    null, ReanimationType.Peashooter,   0,  200,1000, PlantSubClass.Shooter, 90, "PEASHOOTER"),
+                new PlantDefinition(SeedType.Peashooter,    null, ReanimationType.Peashooter,   0,  150,1000, PlantSubClass.Shooter, 90, "PEASHOOTER"),
                 new PlantDefinition(SeedType.Sunflower,     null, ReanimationType.Sunflower,    1,  50, 1000, PlantSubClass.Normal,  1500, "SUNFLOWER"),
                 new PlantDefinition(SeedType.Cherrybomb,    null, ReanimationType.Cherrybomb,   3,  100,3000,PlantSubClass.Normal,  0, "CHERRY_BOMB"),
                 new PlantDefinition(SeedType.Wallnut,       null, ReanimationType.Wallnut,      2,  125, 500,PlantSubClass.Normal,  0, "WALL_NUT"),
