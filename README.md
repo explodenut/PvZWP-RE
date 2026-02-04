@@ -18,5 +18,4 @@
 
 ## 联系方式
 E-mail:explodenut@outlook.com<br>
-[YouTube](https://youtube.com/@explodenutyt)<br>
 [Twitter](https://x.com/explodenutX)<br>
