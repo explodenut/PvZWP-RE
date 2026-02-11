@@ -358,7 +358,7 @@ namespace Lawn
                 if (IsInPlay())
                 {
                     reanimation.AssignRenderGroupToTrack(GlobalMembersReanimIds.ReanimTrackId_anim_glow, -1);
-                    mStateCountdown = 1500;
+                    mStateCountdown = 0;
                 }
                 else
                 {
@@ -408,7 +408,7 @@ namespace Lawn
             }
             else if (theSeedType == SeedType.Pumpkinshell)
             {
-                mPlantHealth = 4000;
+                mPlantHealth = 7777;
                 mWidth = 120;
                 Debug.ASSERT(reanimation != null);
                 reanimation.AssignRenderGroupToTrack(GlobalMembersReanimIds.ReanimTrackId_pumpkin_back, 1);
