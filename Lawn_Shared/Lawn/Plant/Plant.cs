@@ -1767,23 +1767,23 @@ namespace Lawn
             {
                 if (theSeedType == SeedType.Repeater)
                 {
-                    return 1000;
+                    return 500;
                 }
                 if (theSeedType == SeedType.Fumeshroom)
                 {
-                    return 500;
+                    return 250;
                 }
                 if (theSeedType == SeedType.Tallnut)
                 {
-                    return 250;
+                    return 100;
                 }
                 if (theSeedType == SeedType.BeghouledButtonShuffle)
                 {
-                    return 100;
+                    return 50;
                 }
                 if (theSeedType == SeedType.BeghouledButtonCrater)
                 {
-                    return 200;
+                    return 25;
                 }
             }
             switch (theSeedType)
@@ -1888,7 +1888,7 @@ namespace Lawn
 
         public static bool IsFlying(SeedType theSeedtype)
         {
-            return theSeedtype == SeedType.InstantCoffee;
+            return theSeedtype == SeedType.InstantCoffee || theSeedtype == SeedType.Cherrybomb || theSeedtype == SeedType.Umbrella;
         }
 
         public static bool IsUpgrade(SeedType theSeedtype)
