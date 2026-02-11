@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Sexy;
@@ -285,25 +285,30 @@ namespace Lawn
                 reanimation7.AttachToAnotherReanimation(ref reanimation, GlobalMembersReanimIds.ReanimTrackId_anim_head3);
                 mHeadReanimID3 = mApp.ReanimationGetID(reanimation7);
             }
+            else if (theSeedType == SeedType.Torchwood)
+            {
+                mPlantHealth = 5000;
+                mBlinkCountdown = 1000 + RandomNumbers.NextNumber(1000);
+            }
             else if (theSeedType == SeedType.Wallnut)
             {
-                mPlantHealth = 4000;
+                mPlantHealth = 7777;
                 mBlinkCountdown = 1000 + RandomNumbers.NextNumber(1000);
             }
             else if (theSeedType == SeedType.ExplodeONut)
             {
-                mPlantHealth = 4000;
+                mPlantHealth = 7777;
                 mBlinkCountdown = 1000 + RandomNumbers.NextNumber(1000);
                 reanimation.mColorOverride = new SexyColor(255, 64, 64);
             }
             else if (theSeedType == SeedType.GiantWallnut)
             {
-                mPlantHealth = 4000;
+                mPlantHealth = 7777;
                 mBlinkCountdown = 1000 + RandomNumbers.NextNumber(1000);
             }
             else if (theSeedType == SeedType.Tallnut)
             {
-                mPlantHealth = 8000;
+                mPlantHealth = 17777;
                 mHeight = 80;
                 mBlinkCountdown = 1000 + RandomNumbers.NextNumber(1000);
             }
