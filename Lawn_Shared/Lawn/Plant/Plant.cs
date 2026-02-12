@@ -132,7 +132,7 @@ namespace Lawn
             mSquished = false;
             mSeedType = theSeedType;
             mImitaterType = theImitaterType;
-            mPlantHealth = 300;
+            mPlantHealth = 500;
             mDoSpecialCountdown = 0;
             mDisappearCountdown = 200;
             mTargetX = -1;
