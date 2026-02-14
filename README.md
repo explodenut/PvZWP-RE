@@ -15,6 +15,7 @@
 
 ## 其它
 这个项目只有PCDX版
+如果发现小游戏不能解锁，请重打冒险模式
 
 ## 联系方式
 E-mail:explodenut@outlook.com<br>
