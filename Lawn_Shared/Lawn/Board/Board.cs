@@ -6544,12 +6544,12 @@ else
             }
             else if (mBackground == BackgroundType.Num3Pool || mBackground == BackgroundType.Zombiquarium)
             {
-                mPlantRow[0] = PlantRowType.Normal;
-                mPlantRow[1] = PlantRowType.Normal;
-                mPlantRow[2] = PlantRowType.Pool;
-                mPlantRow[3] = PlantRowType.Pool;
-                mPlantRow[4] = PlantRowType.Pool;
-                mPlantRow[5] = PlantRowType.Normal;
+                mPlantRow[0] = PlantRowType.HighGround;
+                mPlantRow[1] = PlantRowType.HighGround;
+                mPlantRow[2] = PlantRowType.HighGround;
+                mPlantRow[3] = PlantRowType.HighGround;
+                mPlantRow[4] = PlantRowType.Normal;
+                mPlantRow[5] = PlantRowType.Pool;
             }
             else if (mBackground == BackgroundType.Num4Fog)
             {
