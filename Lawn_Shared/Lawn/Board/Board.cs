@@ -6464,7 +6464,6 @@ else
             case GameMode.ChallengeBobsledBonanza:
             case GameMode.ChallengeSpeed:
             case GameMode.ChallengeLastStand:
-            case GameMode.ChallengeWarAndPeas2:
             case GameMode.Upsell:
             case GameMode.Intro:
                 mBackground = BackgroundType.Num3Pool;
@@ -6482,12 +6481,13 @@ else
             case GameMode.SurvivalHardStage5:
             case GameMode.SurvivalEndlessStage5:
             case GameMode.ChallengeColumn:
-            case GameMode.ChallengePogoParty:
             case GameMode.ChallengeHighGravity:
             case GameMode.ChallengeBungeeBlitz:
                 mBackground = BackgroundType.Num5Roof;
                 break;
             case GameMode.ChallengeFinalBoss:
+            case GameMode.ChallengeWarAndPeas2:
+            case GameMode.ChallengePogoParty:
                 mBackground = BackgroundType.Num6Boss;
                 break;
             case GameMode.ChallengeZenGarden:
