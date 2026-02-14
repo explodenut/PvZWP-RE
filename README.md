@@ -14,7 +14,7 @@
 资源包可以在[PlantsVsZombies.NET原项目](https://github.com/Mewnojs/PlantsVsZombies.NET)的联系方式里找到
 
 ## 其它
-这个项目目前不提供Android版，需要的自己编译
+这个项目只有PCDX版
 
 ## 联系方式
 E-mail:explodenut@outlook.com<br>
