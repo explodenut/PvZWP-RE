@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lawn_PCGL", "Lawn_PCGL\Lawn_PCGL.csproj", "{C6266476-DEDF-4955-8218-61F10B130CD1}"
+EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LawnModExtension", "LawnModExtension\LawnModExtension.shproj", "{C1DD562E-4506-4D33-92F3-6AE5CFEFE16E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lawn_PCDX", "Lawn_PCDX\Lawn_PCDX.csproj", "{E6CA38E1-6F00-4F17-8A57-18CB759F06AD}"

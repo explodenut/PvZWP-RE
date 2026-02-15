@@ -14,7 +14,7 @@
 资源包可以在[PlantsVsZombies.NET原项目](https://github.com/Mewnojs/PlantsVsZombies.NET)的联系方式里找到<br>
 
 ## 其它
-这个项目只有PCDX版<br>
+这个项目只有PCDX版和PCGL版<br>
 如果发现小游戏不能解锁，请重打冒险模式<br>
 
 ## 联系方式
