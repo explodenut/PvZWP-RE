@@ -5846,7 +5846,7 @@ namespace Lawn
             }
             else if (mApp.IsAdventureMode() || mApp.IsQuickPlayMode())
             {
-                int num = TodCommon.ClampInt(mLevel - 1, 0, GameConstants.NUM_LEVELS - 1);
+                int num = TodCommon.ClampInt(mLevel - 1, 0, GameConstants.NUM_LEVELS);
                 mNumWaves = GameConstants.gZombieWaves[num];
                 if (!mApp.IsFirstTimeAdventureMode() && !mApp.IsMiniBossLevel())
                 {
@@ -6278,7 +6278,7 @@ namespace Lawn
                 return false;
             }
             Debug.ASSERT(GameConstants.gZombieAllowedLevels[(int)theZombieType].mZombieType == theZombieType);
-            int num = TodCommon.ClampInt(theLevel - 1, 0, GameConstants.NUM_LEVELS - 1);
+            int num = TodCommon.ClampInt(theLevel - 1, 0, GameConstants.NUM_LEVELS);
             return GameConstants.gZombieAllowedLevels[(int)theZombieType].mAllowedOnLevel[num] != 0;
         }
 
@@ -6544,12 +6544,12 @@ else
             }
             else if (mBackground == BackgroundType.Num3Pool || mBackground == BackgroundType.Zombiquarium)
             {
-                mPlantRow[0] = PlantRowType.HighGround;
-                mPlantRow[1] = PlantRowType.HighGround;
-                mPlantRow[2] = PlantRowType.HighGround;
-                mPlantRow[3] = PlantRowType.HighGround;
+                mPlantRow[0] = PlantRowType.Normal;
+                mPlantRow[1] = PlantRowType.Normal;
+                mPlantRow[2] = PlantRowType.Pool;
+                mPlantRow[3] = PlantRowType.Pool;
                 mPlantRow[4] = PlantRowType.Normal;
-                mPlantRow[5] = PlantRowType.Pool;
+                mPlantRow[5] = PlantRowType.Normal;
             }
             else if (mBackground == BackgroundType.Num4Fog)
             {
@@ -6560,11 +6560,20 @@ else
                 mPlantRow[4] = PlantRowType.Normal;
                 mPlantRow[5] = PlantRowType.Normal;
             }
-            else if (mBackground == BackgroundType.Num5Roof || mBackground == BackgroundType.Num6Boss)
+            else if (mBackground == BackgroundType.Num5Roof)
             {
                 mPlantRow[0] = PlantRowType.Normal;
                 mPlantRow[1] = PlantRowType.Normal;
                 mPlantRow[2] = PlantRowType.Normal;
+                mPlantRow[3] = PlantRowType.Normal;
+                mPlantRow[4] = PlantRowType.Normal;
+                mPlantRow[5] = PlantRowType.Dirt;
+            }
+            else if (mBackground == BackgroundType.Num6Boss)
+            {
+                mPlantRow[0] = PlantRowType.HighGround;
+                mPlantRow[1] = PlantRowType.HighGround;
+                mPlantRow[2] = PlantRowType.HighGround;
                 mPlantRow[3] = PlantRowType.Normal;
                 mPlantRow[4] = PlantRowType.Normal;
                 mPlantRow[5] = PlantRowType.Dirt;
@@ -8091,7 +8100,7 @@ else
 
         public bool StageHasRoof()
         {
-            return mBackground == BackgroundType.Num5Roof || mBackground == BackgroundType.Num6Boss;
+            return mBackground == BackgroundType.Num5Roof;
         }
 
         public void SpawnZombiesFromPool()
