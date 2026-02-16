@@ -6574,7 +6574,7 @@ else
                 mPlantRow[0] = PlantRowType.HighGround;
                 mPlantRow[1] = PlantRowType.HighGround;
                 mPlantRow[2] = PlantRowType.HighGround;
-                mPlantRow[3] = PlantRowType.Normal;
+                mPlantRow[3] = PlantRowType.HighGround;
                 mPlantRow[4] = PlantRowType.Normal;
                 mPlantRow[5] = PlantRowType.Dirt;
             }
