@@ -3337,9 +3337,9 @@ namespace Lawn
         public void AddSunMoney(int theAmount)
         {
             mSunMoney += theAmount;
-            if (mSunMoney > 214748364)
+            if (mSunMoney > 2147483647)
             {
-                mSunMoney = 214748364;
+                mSunMoney = 2147483647;
             }
         }
 
