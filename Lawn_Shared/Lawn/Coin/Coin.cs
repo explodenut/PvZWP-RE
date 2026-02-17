@@ -912,15 +912,15 @@ namespace Lawn
         {
             if (theType == CoinType.Silver)
             {
-                return 10;
+                return 1;
             }
             if (theType == CoinType.Gold)
             {
-                return 100;
+                return 5;
             }
             if (theType == CoinType.Diamond)
             {
-                return 1000;
+                return 100;
             }
             return 0;
         }

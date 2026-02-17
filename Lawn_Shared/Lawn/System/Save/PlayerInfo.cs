@@ -126,14 +126,14 @@ namespace Lawn
         public void AddCoins(int theAmount)
         {
             mCoins += theAmount;
-            if (mCoins > 99999)
+            if (mCoins > 999999)
             {
-                mCoins = 99999;
+                mCoins = 999999;
                 return;
             }
-            if (mCoins < 0)
+            if (mCoins < 1)
             {
-                mCoins = 0;
+                mCoins = 200;
             }
         }
 
