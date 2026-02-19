@@ -17,6 +17,10 @@
 这个项目只有PCDX版和PCGL版<br>
 如果发现小游戏不能解锁，请重打冒险模式<br>
 
+## 注意事项
+这是一个早期版本，诸多问题请在Issues里提交<br>
+自Alpha1.5.0起，我们不再提供编译好的版本，需要自行编译，源代码里没有资源文件，请按上述方法获取资源文件，当然你也可以在旧的发行版里提取
+
 ## 联系方式
 E-mail:explodenut@outlook.com<br>
 [Twitter](https://x.com/explodenutX)<br>
