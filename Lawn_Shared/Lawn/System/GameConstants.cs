@@ -806,21 +806,21 @@ GameConstants.gZombieAllowedLevels = new ZombieAllowedLevels[(int)ZombieType.Zom
             GameConstants.gProjectileDefinition = new ProjectileDefinition[(int)ProjectileType.ProjectilesCount]
             {
                 /*                     | ProjectileType 枚举值 | ImageRow | 伤害值 |*/
-                new ProjectileDefinition(ProjectileType.Pea,            0,  30  ),
-                new ProjectileDefinition(ProjectileType.Snowpea,        0,  40  ),
-                new ProjectileDefinition(ProjectileType.Cabbage,        0,  60  ),
-                new ProjectileDefinition(ProjectileType.Melon,          0,  100  ),
+                new ProjectileDefinition(ProjectileType.Pea,            0,  25  ),
+                new ProjectileDefinition(ProjectileType.Snowpea,        0,  5  ),
+                new ProjectileDefinition(ProjectileType.Cabbage,        0,  40  ),
+                new ProjectileDefinition(ProjectileType.Melon,          0,  80  ),
                 new ProjectileDefinition(ProjectileType.Puff,           0,  25  ),
-                new ProjectileDefinition(ProjectileType.Wintermelon,    0,  120  ),
+                new ProjectileDefinition(ProjectileType.Wintermelon,    0,  90  ),
                 new ProjectileDefinition(ProjectileType.Fireball,       0,  80  ),
                 new ProjectileDefinition(ProjectileType.Star,           0,  1000  ),
                 new ProjectileDefinition(ProjectileType.Spike,          0,  30  ),
                 new ProjectileDefinition(ProjectileType.Basketball,     0,  1000000  ),
-                new ProjectileDefinition(ProjectileType.Kernel,         0,  30  ),
-                new ProjectileDefinition(ProjectileType.Cobbig,         0,  300 ),
-                new ProjectileDefinition(ProjectileType.Butter,         0,  60  ),
+                new ProjectileDefinition(ProjectileType.Kernel,         0,  15  ),
+                new ProjectileDefinition(ProjectileType.Cobbig,         0,  1800 ),
+                new ProjectileDefinition(ProjectileType.Butter,         0,  50  ),
                 new ProjectileDefinition(ProjectileType.ZombiePea,      0,  30  ),
-                new ProjectileDefinition(ProjectileType.ZombiePeaMindControl, 0, 35),
+                new ProjectileDefinition(ProjectileType.ZombiePeaMindControl, 0, 20),
             };
             GameConstants.SEED_BANK_OFFSET_X = 0;
             GameConstants.SEED_BANK_OFFSET_X_END = 0;
