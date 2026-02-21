@@ -6391,15 +6391,11 @@ else if (mLevel <= 4 * GameConstants.LEVELS_PER_AREA)
 {
     mBackground = BackgroundType.Num4Fog;
 }
-else if (mLevel <= 5 * GameConstants.LEVELS_PER_AREA)
+else if (mLevel < 5 * GameConstants.LEVELS_PER_AREA)
 {
     mBackground = BackgroundType.Num5Roof;
 }
-else if (mLevel < GameConstants.FINAL_LEVEL)
-{
-    mBackground = BackgroundType.Num6Boss;
-}
-else if (mLevel == GameConstants.FINAL_LEVEL)
+else if (mLevel <= GameConstants.FINAL_LEVEL)
 {
     mBackground = BackgroundType.Num6Boss;
 }
@@ -6571,10 +6567,10 @@ else
             }
             else if (mBackground == BackgroundType.Num6Boss)
             {
-                mPlantRow[0] = PlantRowType.HighGround;
-                mPlantRow[1] = PlantRowType.HighGround;
-                mPlantRow[2] = PlantRowType.HighGround;
-                mPlantRow[3] = PlantRowType.HighGround;
+                mPlantRow[0] = PlantRowType.Normal;
+                mPlantRow[1] = PlantRowType.Normal;
+                mPlantRow[2] = PlantRowType.Normal;
+                mPlantRow[3] = PlantRowType.Normal;
                 mPlantRow[4] = PlantRowType.Normal;
                 mPlantRow[5] = PlantRowType.Dirt;
             }
@@ -8100,7 +8096,7 @@ else
 
         public bool StageHasRoof()
         {
-            return mBackground == BackgroundType.Num5Roof;
+            return mBackground == BackgroundType.Num5Roof || mBackground == BackgroundType.Num6Boss;
         }
 
         public void SpawnZombiesFromPool()
