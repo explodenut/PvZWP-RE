@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Sexy;
 using Sexy.TodLib;
 
