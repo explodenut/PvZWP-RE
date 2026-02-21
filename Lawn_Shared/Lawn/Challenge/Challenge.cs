@@ -1586,7 +1586,11 @@ namespace Lawn
             {
                 ZombieType[] array4 = new ZombieType[]
                 {
-                    ZombieType.Pogo
+                    ZombieType.Normal,
+                    ZombieType.Pogo,
+                    ZombieType.Bungee,
+                    ZombieType.Dancer,
+                    ZombieType.Polevaulter
                 };
                 InitZombieWavesFromList(array4, array4.Length);
             }
