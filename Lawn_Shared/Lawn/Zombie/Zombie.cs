@@ -268,18 +268,18 @@ namespace Lawn
                 ReanimShowPrefix("anim_cone", 0);
                 ReanimShowPrefix("anim_hair", -1);
                 mHelmType = HelmType.TrafficCone;
-                mHelmHealth = 370;
+                mHelmHealth = 500;
                 break;
             case ZombieType.Pail:
                 LoadPlainZombieReanim();
                 ReanimShowPrefix("anim_bucket", 0);
                 ReanimShowPrefix("anim_hair", -1);
                 mHelmType = HelmType.Pail;
-                mHelmHealth = 1100;
+                mHelmHealth = 1500;
                 break;
             case ZombieType.Door:
                 mShieldType = ShieldType.Door;
-                mShieldHealth = 1100;
+                mShieldHealth = 1800;
                 mPosX += 60f;
                 LoadPlainZombieReanim();
                 AttachShield();
@@ -294,7 +294,7 @@ namespace Lawn
             case ZombieType.Ladder:
                 mBodyHealth = 500;
                 mShieldType = ShieldType.Ladder;
-                mShieldHealth = 500;
+                mShieldHealth = 1000;
                 mZombieAttackRect = new TRect(10, 0, 50, 115);
                 if (IsOnBoard())
                 {
@@ -342,14 +342,14 @@ namespace Lawn
                 mZombieRect = new TRect(50, 0, 57, 115);
                 ReanimShowPrefix("anim_hair", -1);
                 mHelmType = HelmType.Football;
-                mHelmHealth = 1400;
+                mHelmHealth = 2000;
                 mAnimTicksPerFrame = 6;
                 mVariant = false;
                 break;
             case ZombieType.Digger:
             {
                 mHelmType = HelmType.Digger;
-                mHelmHealth = 100;
+                mHelmHealth = 300;
                 mVariant = false;
                 mHasObject = true;
                 mZombieRect = new TRect(50, 0, 28, 115);
@@ -408,7 +408,7 @@ namespace Lawn
             case ZombieType.Gargantuar:
             case ZombieType.RedeyeGargantuar:
             {
-                mBodyHealth = 3000;
+                mBodyHealth = 3600;
                 mAnimFrames = 24;
                 mAnimTicksPerFrame = 8;
                 mWidth = 180;
@@ -449,7 +449,7 @@ namespace Lawn
                 if (mZombieType == ZombieType.RedeyeGargantuar)
                 {
                     aBodyReanim.SetImageOverride(GlobalMembersReanimIds.ReanimTrackId_anim_head1, AtlasResources.IMAGE_REANIM_ZOMBIE_GARGANTUAR_HEAD_REDEYE);
-                    mBodyHealth = 6000;
+                    mBodyHealth = 10000;
                 }
 
                 break;
@@ -548,7 +548,7 @@ namespace Lawn
                     mPosX = Constants.WIDE_BOARD_WIDTH + 80;
                     mAltitude = -10f;
                     mHelmType = HelmType.Bobsled;
-                    mHelmHealth = 300;
+                    mHelmHealth = 800;
                     mZombieRect = new TRect(-50, 0, 275, 115);
                 }
                 mVelX = 0.6f;
@@ -603,7 +603,7 @@ namespace Lawn
                 mZombieAttackRect = new TRect(20, 0, 50, 115);
                 mZombiePhase = ZombiePhase.NewspaperReading;
                 mShieldType = ShieldType.Newspaper;
-                mShieldHealth = 150;
+                mShieldHealth = 1200;
                 mVariant = false;
                 AttachShield();
                 break;
@@ -626,7 +626,7 @@ namespace Lawn
                 aBodyReanim.SetFramesForLayer(GlobalMembersReanimIds.ReanimTrackId_propeller);
                 aBodyReanim.mLoopType = ReanimLoopType.LoopFullLastFrame;
                 aBodyReanim.AttachToAnotherReanimation(ref reanimation8, GlobalMembersReanimIds.ReanimTrackId_hat);
-                mFlyingHealth = 20;
+                mFlyingHealth = 200;
                 mZombieRect = new TRect(36, 30, 42, 115);
                 mZombieAttackRect = new TRect(20, 30, 50, 115);
                 mVariant = false;
@@ -664,7 +664,7 @@ namespace Lawn
                 }
                 if (mApp.IsIZombieLevel())
                 {
-                    mBodyHealth = 70;
+                    mBodyHealth = 100;
                 }
                 break;
             case ZombieType.Boss:
@@ -675,11 +675,11 @@ namespace Lawn
                 aRenderLayer = RenderLayer.Top;
                 if (mApp.IsAdventureMode() || mApp.IsQuickPlayMode())
                 {
-                    mBodyHealth = 40000;
+                    mBodyHealth = 60000;
                 }
                 else
                 {
-                    mBodyHealth = 60000;
+                    mBodyHealth = 100000;
                 }
                 if (IsOnBoard())
                 {
@@ -736,7 +736,7 @@ namespace Lawn
                 aBodyReanim.mFrameBasePose = 0;
                 TodCommon.TodScaleRotateTransformMatrix(ref aAttachEffect.mOffset.mMatrix, 50f * Constants.S, 0f, 0.2f, -0.8f, 0.8f);
                 mHelmType = HelmType.Wallnut;
-                mHelmHealth = 1100;
+                mHelmHealth = 1800;
                 mVariant = false;
                 break;
             }
@@ -760,7 +760,7 @@ namespace Lawn
                 aBodyReanim.mFrameBasePose = 0;
                 TodCommon.TodScaleRotateTransformMatrix(ref aAttachEffect.mOffset.mMatrix, 37f * Constants.S, 0f, 0.2f, -0.8f, 0.8f);
                 mHelmType = HelmType.Tallnut;
-                mHelmHealth = 2200;
+                mHelmHealth = 3000;
                 mVariant = false;
                 mPosX += 30f;
                 break;
