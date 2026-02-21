@@ -279,7 +279,7 @@ namespace Lawn
                 break;
             case ZombieType.Door:
                 mShieldType = ShieldType.Door;
-                mShieldHealth = 1800;
+                mShieldHealth = 2147;
                 mPosX += 60f;
                 LoadPlainZombieReanim();
                 AttachShield();
@@ -408,7 +408,7 @@ namespace Lawn
             case ZombieType.Gargantuar:
             case ZombieType.RedeyeGargantuar:
             {
-                mBodyHealth = 3600;
+                mBodyHealth = 5000;
                 mAnimFrames = 24;
                 mAnimTicksPerFrame = 8;
                 mWidth = 180;
