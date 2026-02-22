@@ -665,7 +665,7 @@ GameConstants.gZombieAllowedLevels = new ZombieAllowedLevels[(int)ZombieType.Zom
                 new PlantDefinition(SeedType.Pumpkinshell,  null, ReanimationType.Pumpkin,      25, 125,3000,PlantSubClass.Normal,  0, "PUMPKIN"),
                 new PlantDefinition(SeedType.Magnetshroom,  null, ReanimationType.Magnetshroom, 35, 100,750, PlantSubClass.Normal,  0, "MAGNET_SHROOM"),
                 new PlantDefinition(SeedType.Cabbagepult,   null, ReanimationType.Cabbagepult,  13, 100,750, PlantSubClass.Shooter, 250, "CABBAGE_PULT"),
-                new PlantDefinition(SeedType.Flowerpot,     null, ReanimationType.FlowerPot,    33, 0, 750, PlantSubClass.Normal,  0, "FLOWER_POT"),
+                new PlantDefinition(SeedType.Flowerpot,     null, ReanimationType.FlowerPot,    33, 0, 0, PlantSubClass.Normal,  0, "FLOWER_POT"),
                 new PlantDefinition(SeedType.Kernelpult,    null, ReanimationType.Kernelpult,   13, 100,750, PlantSubClass.Shooter, 200, "KERNEL_PULT"),
                 new PlantDefinition(SeedType.InstantCoffee, null, ReanimationType.Coffeebean,   33, 75, 750, PlantSubClass.Normal,  0, "COFFEE_BEAN"),
                 new PlantDefinition(SeedType.Garlic,        null, ReanimationType.Garlic,       8,  50, 750, PlantSubClass.Normal,  0, "GARLIC"),
